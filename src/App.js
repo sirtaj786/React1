@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Answer } from './component/Answer';
 
 function App() {
+  let mobile=["Android","Blackberry","iPhone","Window Phone"];
+  let newmobile=mobile.map((mobiles) =>
+  {
+    return<li>{mobiles}</li>
+  })
+  let man=["Samsung","HTC","Micromax","Apple"];
+  let newman=man.map((man1) =>
+  {
+    return<li>{man1}</li>
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div className='App'>
+     <Answer Name={newmobile} second={newman}/>
+   </div>
+      
+       
+       // <Hello/>
+       // <Answer/>
+     
   );
 }
 
